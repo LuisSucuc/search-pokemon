@@ -3,7 +3,7 @@ import { FETCH_POKEMON_FAILURE, FETCH_POKEMON_REQUEST, FETCH_POKEMON_SUCCESS } f
 const initialState = {
     loading: false,
     pokemon: [],
-    error : ''
+    error : null
 }
 
 const search = (state = initialState, action) => {
@@ -17,7 +17,8 @@ const search = (state = initialState, action) => {
         case FETCH_POKEMON_SUCCESS:
             return {
                 loading: false,
-                pokemon: action.payload
+                pokemon: action.payload,
+                error: null
             }
          case FETCH_POKEMON_FAILURE:
             return {

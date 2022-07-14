@@ -10,10 +10,10 @@ export const fetchPokemonRequest = () => {
     }
  }
 
- export const fetchPokemonSuccess = (Pokemon) => { 
+ export const fetchPokemonSuccess = (pokemonData) => { 
     return {
         type: FETCH_POKEMON_SUCCESS,
-        payload: Pokemon
+        payload: pokemonData
     }
  }
 
